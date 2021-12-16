@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+  --azul-suave: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --paragrapht-font-size: 18px;
+  --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+  --Very-dark-blue-cardBG: hsl(216, 50%, 16%);
+  --Very-dark-blue-line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Very-dark-blue-mainBG);
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--Very-dark-blue-cardBG);
+  width: 300px;
+  height: 500px;
+  border-radius: 13px;
+  box-shadow: 0px 10px 10px  rgba(20, 25, 29, 0.5);
+}
+
+.card__content {
+  padding: 16px;
+}
+
+.card__img {
+  display: block;
+  width: 268px;
+  height: 268px;
+  background-color: var(--Cyan);
+  border-radius: 14px;
+}
+
+.card__img .img {
+  position: relative;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.card__img:hover .img,
+.card__img:hover .icon-view {
+  transform: scale(1);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.icon-view {
+  position: absolute;
+  top: 216px;
+  left: 660px;
+  display: none;
+}
+
+.card__img:hover .icon-view {
+  display: block;
+}
+
+.card__content--header {
+  margin-top: 15px;
+}
+
+.card__content--header .card__title a {
+  display: block;
+  color: var(--White);
+  font-size: var(--paragrapht-font-size);
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-decoration: none;
+}
+
+
+.card__content--header .card__paragraph {
+  color: var(--azul-suave);
+  margin-bottom: 18px;
+}
+
+.card__content--header .card__stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Very-dark-blue-line);
+}
+
+.card__stats .card__stats--eth {
+  color: var(--Cyan);
+}
+
+.card__stats .card__stats--time{
+  color: var(--azul-suave);
+}
+
+.card__stats .card__stats--eth, 
+.card__stats .card__stats--time {
+  display: flex;
+  gap: 8px;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  margin-top: 15px;
+}
+
+.card__footer--img {
+  height: 30px;
+}
+
+.card__footer--paragraph {
+  color: var(--azul-suave);
+}
+
+.card__footer--paragraph a {
+  color: var(--White);
+  text-decoration: none;
+}
+
+.card__content--header .card__title a:hover,
+.card__footer--paragraph a:hover {
+  color: var(--Cyan);
+}
+
